@@ -1,0 +1,43 @@
+{% load static %}
+<div class="header__bar">
+                    <a href="#!" class="nav__bars-open">
+                        <span class="burger"></span>
+                        <span class="burger"></span>
+                        <span class="burger"></span>
+                    </a>
+
+                    <a href="{% url 'index' %}" class="logo">
+                        <img src="{% static 'digital/assets/icons/LOGO.svg' %}" alt="logo">
+                    </a>
+                    <form class="header__search">
+                        <i class="fal fa-search"></i>
+                        <input type="text" class="header__search-txt" placeholder="Поиск">
+                    </form>
+
+                    <ul class="header__list">
+                        <li>
+                            <a href="{% 'digital/registration.html" class="header__list-item _truck">
+                                <i class="far fa-truck"></i>
+                                Доставка
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% 'digital/assets/favorites.html" class="header__list-item">
+                                <img src="{% static 'digital/assets/icons/wishlist-icon.svg' %}" alt="">
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% 'digital/basket.html" class="header__list-item">
+                                <img src="{% static 'digital/assets/icons/bag.svg' %}" alt="">
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% 'digital/profile.html" class="header__list-item">
+                                <img src="{% static 'digital/assets/icons/profile-icon.svg' %}" alt="">
+
+                            </a>
+                        </li>
+                    </ul>
+                </div>

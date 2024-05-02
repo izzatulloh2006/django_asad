@@ -1,0 +1,74 @@
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include 'components_base/_style.html' %}
+
+    <title>
+        {% block title %}
+
+        {% endblock title %}
+    </title>
+    <!-- Css - Стили -->
+
+</head>
+
+<body>
+
+<nav class="nav">
+    {% include 'components_base/_nav__content.html' %}
+
+    <!-- /.nav__content -->
+
+    {% include 'components_base/_cat_burger.html' %}
+    <!-- /.container -->
+    <!-- /.nav__catigories -->
+</nav>
+<!-- /.nav -->
+
+<div class="wrapper">
+
+    <header class="header">
+        <div class="container">
+
+            <div class="header__content">
+                {% include 'components_base/_header__bar.html' %}
+
+                {% include 'components_base/_categories.html' %}
+
+
+                <!-- /.nav__catigories -->
+                {% block slider %}
+                {% include 'components_base/_slider.html' %}
+                {% endblock slider %}
+
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    {% block main %}
+
+    {% endblock main %}
+
+
+    {% include 'components_base/_footer.html' %}
+
+
+</div>
+
+
+{% include 'components_base/_scripts.html' %}
+
+
+<!-- Js - скрипты -->
+</body>
+
+</html>
+
+

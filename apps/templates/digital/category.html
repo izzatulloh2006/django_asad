@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load digital_tags %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+{% block slider %}
+{% endblock slider %}
+
+
+
+{% block main %}
+
+<main class="main">
+            <div class="container">
+                <section class="products">
+                    <h2 class="products__title">{{ category.title }}</h2>
+                    <div class="products__content">
+
+                        <!-- /.products__item -->
+                        {% for product in products %}
+                        {% include 'digital/components/_card_product.html' %}
+                        {% endfor %}
+
+
+                    </div>
+                    <!-- /.products__content -->
+                </section>
+                <!-- /.products -->
+            </div>
+            <!-- /.container -->
+        </main>
+{% endblock main %}
+
